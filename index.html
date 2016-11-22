@@ -307,20 +307,16 @@
 </head>
 <body>
 <div  role="banner">
-  <h1>The <code>lt</code> element </h1>
-  <h2>Unofficial Draft, last updated 19 November 2016</h2>
+  <h1>The <code>address</code> element </h1>
+  <h2>Unofficial Draft, last updated 22 November 2016</h2>
 </div>
 <div role="contentinfo">
   <dl>
     <dt>Editor:</dt>
     <dd>Steve Faulkner, The Paciello Group <span class="ed_mailto"><a href="mailto:sfaulkner@paciellogroup.com">sfaulkner@paciellogroup.com</a></span></dd>
   </dl>
-  <h2>About this document </h2>
-  <p> It defines an element to be used for the identification of  a title or caption for lists. All normative
-    content in the <a href="http://w3c.github.io/html/">HTML 5.2 specification</a>, unless specifically overridden by this
-    specification, is intended to be the basis for this specification.</p>
-  <!--<p> You can make a comment regarding this document, please either submit it using the <A href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=Using%20ARIA%20in%20HTML">W3C public bug database</A> (note: you need to have an account to post bugs), or send it as an e-mail message to <A href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</A> (<A href="mailto:public-html-comments-request@w3.org?subject=subscribe">subscribe</A>, <A href="http://lists.w3.org/Archives/Public/public-html-comments/">archives</A>).  Comment and feedback is welcome.</p>
-  <p><em>This living specification may be used under the terms of <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0 Universal</a>.  To the extent possible under law, the editor has waived all copyright and  related or neighboring rights to this work. </em></p>-->
+  <h2>About this document  <!--<p> You can make a comment regarding this document, please either submit it using the <A href="https://www.w3.org/Bugs/Public/enter_bug.cgi?product=HTML%20WG&component=Using%20ARIA%20in%20HTML">W3C public bug database</A> (note: you need to have an account to post bugs), or send it as an e-mail message to <A href="mailto:public-html-comments@w3.org">public-html-comments@w3.org</A> (<A href="mailto:public-html-comments-request@w3.org?subject=subscribe">subscribe</A>, <A href="http://lists.w3.org/Archives/Public/public-html-comments/">archives</A>).  Comment and feedback is welcome.</p>
+  <p><em>This living specification may be used under the terms of <a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0 1.0 Universal</a>.  To the extent possible under law, the editor has waived all copyright and  related or neighboring rights to this work. </em></p>-->  </h2>
   <p>A <a data-ember-action="956" href="https://discourse.wicg.io/t/proposal-list-head-caption-title/1832">[proposal] list head/caption/title</a>    is  available.</p>
  
 </div>
@@ -332,25 +328,52 @@
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#contexts-in-which-this-element-can-be-used" id="ref-for-contexts-in-which-this-element-can-be-used-16">Contexts in which this element can be used</a>: </dt>
    <dd>Where <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#flow-content" id="ref-for-flow-content-32">flow content</a> is expected. </dd>
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#content-model" id="ref-for-content-model-19">Content model</a>: </dt>
-   <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#flow-content" id="ref-for-flow-content-33">Flow content</a>, but with no <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#heading-content" id="ref-for-heading-content-3">heading      content</a> descendants, no <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#sectioning-content" id="ref-for-sectioning-content-21">sectioning content</a> descendants, and no <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-header" id="ref-for-elementdef-header-20">header</a>, <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-footer" id="ref-for-elementdef-footer-17">footer</a>, or <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-5">address</a> element descendants. </dd>
+   <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#flow-content" id="ref-for-flow-content-33">Flow content</a>, but with  no <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#sectioning-content" id="ref-for-sectioning-content-21">sectioning content</a> descendants,  or <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-5">address</a> element descendants. </dd>
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#tag-omission-in-text-html" id="ref-for-tag-omission-in-text-html-16">Tag omission in text/html</a>: </dt>
    <dd>Neither tag is omissible </dd>
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#content-attribute" id="ref-for-content-attribute-17">Content attributes</a>: </dt>
    <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#global-attributes" id="ref-for-global-attributes-16">Global attributes</a></dd>
    <dt>Allowed <a href="http://w3c.github.io/html/dom.html#aria-role-attribute">ARIA role attribute</a> values: </dt>
-   <dd><a data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#contentinfo">contentinfo</a> role (default - <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#do-not-set" id="ref-for-do-not-set-10"><em>do not set</em></a>) </dd>
+   <dd><a data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#note">note</a> role (default - <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#do-not-set" id="ref-for-do-not-set-10"><em>do not set</em></a>) </dd>
    <dt>Allowed <a href="http://w3c.github.io/html/dom.html#state-and-property-attributes">ARIA state and property attributes</a>: </dt>
    <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-17">Global aria-* attributes</a></dd>
    <dd>Any aria-* attributes <a href="http://w3c.github.io/html/dom.html#allowed-aria-roles-states-and-properties"> applicable to the allowed roles</a>. </dd>
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#dom-interface" id="ref-for-dom-interface-16">DOM interface</a>: </dt>
    <dd>Uses <a data-link-type="idl" href="http://w3c.github.io/html/dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-26">HTMLElement</a>. </dd>
  </dl>
- <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-6">address</a> element <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#represent" id="ref-for-represent-19">represents</a> the contact information for its nearest <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-article" id="ref-for-elementdef-article-22">article</a> or <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-body" id="ref-for-elementdef-body-44">body</a> element ancestor. If that is <a href="http://w3c.github.io/html/sections.html#the-body-element">the body element</a>,      then the contact information applies to the document as a whole.</p>
- <div id="example-0476e6cf"> For example, a page at the W3C Web site related to HTML might include the following contact      information:
-   <pre>&lt;ADDRESS&gt;    &lt;A href="../People/Raggett/"&gt;Dave Raggett&lt;/A&gt;,    &lt;A href="../People/Arnaud/"&gt;Arnaud Le Hors&lt;/A&gt;,    contact persons for the &lt;A href="Activity"&gt;W3C HTML Activity&lt;/A&gt;  &lt;/ADDRESS&gt;  </pre>
- </div>
- <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-7">address</a> element must not be used to represent arbitrary addresses (e.g., postal    addresses), unless those addresses are in fact the relevant contact information. (The <a data-link-type="element" href="http://w3c.github.io/html/grouping-content.html#elementdef-p" id="ref-for-elementdef-p-17">p</a> element is the appropriate element for marking up postal addresses in general.)</p>
- <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-8">address</a> element must not contain information other than contact information.</p>
- <p>&nbsp;</p>
+ <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-6">address</a> element <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#represent" id="ref-for-represent-19">represents</a> contact information for a person, people or organization. It should include physical and/or digital location/contact information and a means of identifying a living entity, entities or organization the information pertains to. </p>
+ <div id="example-0476e6cf"> For example, the W3C twitter account:
+   <pre>
+&lt;address&gt;
+&lt;p&gt;W3C on Twitter:
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/w3c&quot;&gt;@w3c&lt;/a&gt;
+&lt;p&gt;https://twitter.com/w3c
+&lt;/address&gt;   </pre>
+   <p>Address, telephone and fax numbers for an organization:
+   <pre>
+&lt;address&gt;<br>UNIVERSITY INTERSCHOLASTIC LEAGUE&lt;br/&gt;
+1701 Manor Road, Austin, TX 78722&lt;br/&gt;
+Tel: (512) 471-5883 | Fax: (512) 471-5908
+&lt;/address&gt;</pre>
+
+ <p>The address part of a form:</p>
+ <pre>
+&lt;address&gt;
+&lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
+&lt;label for=&quot;hn&quot;&gt;House number:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;hn&quot;&gt;
+&lt;label for=&quot;street&quot;&gt;Street:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;street&quot;&gt;
+...
+&lt;/address&gt;
+</pre>
+
+<p>Location of a cat</p>
+
+ <pre>&lt;address&gt; 
+Lola the cat is at 
+Latitude: 51.413126 
+Longtitude: -0.298219 
+&lt;/address>  </pre>
+</div>
+
 </body>
 </html>
