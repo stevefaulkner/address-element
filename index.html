@@ -308,7 +308,7 @@
 <body>
 <div  role="banner">
   <h1>The <code>address</code> element </h1>
-  <h2>Unofficial Draft, last updated 22 November 2016</h2>
+  <h2>Unofficial Draft, last updated 24 November 2016</h2>
 </div>
 <div role="contentinfo">
   <dl>
@@ -334,20 +334,19 @@
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#content-attribute" id="ref-for-content-attribute-17">Content attributes</a>: </dt>
    <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#global-attributes" id="ref-for-global-attributes-16">Global attributes</a></dd>
    <dt>Allowed <a href="http://w3c.github.io/html/dom.html#aria-role-attribute">ARIA role attribute</a> values: </dt>
-   <dd><a data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#note">note</a> role (default - <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#do-not-set" id="ref-for-do-not-set-10"><em>do not set</em></a>) </dd>
+   <dd><a data-link-type="value" href="https://www.w3.org/TR/wai-aria/roles#group">group</a> role (default - <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#do-not-set" id="ref-for-do-not-set-10"><em>do not set</em></a>) </dd>
    <dt>Allowed <a href="http://w3c.github.io/html/dom.html#state-and-property-attributes">ARIA state and property attributes</a>: </dt>
    <dd><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#global-aria--attributes" id="ref-for-global-aria--attributes-17">Global aria-* attributes</a></dd>
    <dd>Any aria-* attributes <a href="http://w3c.github.io/html/dom.html#allowed-aria-roles-states-and-properties"> applicable to the allowed roles</a>. </dd>
    <dt><a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#dom-interface" id="ref-for-dom-interface-16">DOM interface</a>: </dt>
    <dd>Uses <a data-link-type="idl" href="http://w3c.github.io/html/dom.html#htmlelement-htmlelement" id="ref-for-htmlelement-htmlelement-26">HTMLElement</a>. </dd>
  </dl>
- <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-6">address</a> element <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#represent" id="ref-for-represent-19">represents</a> contact information for a person, people or organization. It should include physical and/or digital location/contact information and a means of identifying a living entity, entities or organization the information pertains to. </p>
+ <p>The <a data-link-type="element" href="http://w3c.github.io/html/sections.html#elementdef-address" id="ref-for-elementdef-address-6">address</a> element <a data-link-type="dfn" href="http://w3c.github.io/html/dom.html#represent" id="ref-for-represent-19">represents</a> contact information for a person, people or organization. It should include physical and/or digital location/contact information and a means of identifying a person(s) or organization the information pertains to. </p>
  <div id="example-0476e6cf"> For example, the W3C twitter account:
    <pre>
 &lt;address&gt;
 &lt;p&gt;W3C on Twitter:
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/w3c&quot;&gt;@w3c&lt;/a&gt;
-&lt;p&gt;https://twitter.com/w3c
 &lt;/address&gt;   </pre>
    <p>Address, telephone and fax numbers for an organization:
    <pre>
@@ -356,15 +355,20 @@
 Tel: (512) 471-5883 | Fax: (512) 471-5908
 &lt;/address&gt;</pre>
 
- <p>The address part of a form:</p>
+ <p>The address part of a form output:</p>
  <pre>
-&lt;address&gt;
+...
 &lt;label for=&quot;name&quot;&gt;Name:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;name&quot;&gt;
 &lt;label for=&quot;hn&quot;&gt;House number:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;hn&quot;&gt;
 &lt;label for=&quot;street&quot;&gt;Street:&lt;/label&gt; &lt;input type=&quot;text&quot; id=&quot;street&quot;&gt;
 ...
+&lt;address&gt;
+&lt;p&gt;Name: Hament Dhanji
+&lt;p&gt;House number: 1976
+&lt;p&gt;Street: Meadowband Road
+...
 &lt;/address&gt;
-</pre>
+ </pre>
 
 <p>Location of a cat</p>
 
@@ -375,5 +379,22 @@ Longtitude: -0.298219
 &lt;/address>  </pre>
 </div>
 
+<p>The meaning and usage contexts of the <code>address</code> element is broad. If developers wish to provide more granular and specific semantics for the <code>address</code> element use of any of the various semantic web metadata <a href="http://schema.org">schemas</a> is suggested.
+<p>For example, the postal address of a local business annotated using RDFa
+<pre>
+&lt;div vocab="http://schema.org/" typeof="LocalBusiness"&gt; 
+&lt;h1&gt;&lt;span property="name"&gt;Beachwalk Beachwear &amp; Giftware&lt;/span&gt;&lt;/h1&gt; 
+&lt;span property="description"&gt; A superb collection of fine gifts and clothing
+to accent your stay in Mexico Beach.&lt;/span&gt;
+ 
+<mark>&lt;address property="address" typeof="PostalAddress"&gt;</mark> 
+&lt;span property="streetAddress"&gt;3102 Highway 98&lt;/span&gt; 
+&lt;span property="addressLocality"&gt;Mexico Beach&lt;/span&gt;,
+&lt;span property="addressRegion"&gt;FL&lt;/span&gt; 
+<mark>&lt;/address&gt;</mark> 
+
+Phone: &lt;span property="telephone"&gt;850-648-4200&lt;/span&gt; 
+&lt;/div&gt;
+</pre>
 </body>
 </html>
